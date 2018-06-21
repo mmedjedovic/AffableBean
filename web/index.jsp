@@ -17,9 +17,9 @@
         <title>The Affable Bean</title>
     </head>
     <body>
-    <sql:query var="categories" dataSource="jdbc/affablebean">
+    <%--<sql:query var="categories" dataSource="jdbc/affablebean">
         SELECT * FROM category
-    </sql:query>
+    </sql:query>--%>
         <div id="main">
             
 
@@ -33,7 +33,7 @@
             </div>
 
              <div id="indexRightColumn">
-                <c:forEach var="category" items="${categories.rows}">
+                <c:forEach var="category" items="${categories}">
                     <div class="categoryBox">
                         <a href="category?${category.id}">
 
